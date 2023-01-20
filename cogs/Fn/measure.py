@@ -13,9 +13,9 @@ def Measure(star,end,wide,fi):
             else: 
                 mid = int((len(lst)+1)/2) - 1 
                 midvalue.append(lst[mid])
-                name = f"data {lst[0]} - {lst[-1]}" 
-                data[name] = copy.deepcopy(lst)
-                lst.clear()
+            name = f"data {lst[0]} - {lst[-1]}" 
+            data[name] = copy.deepcopy(lst)
+            lst.clear()
     xifi = [x * i for x,i in zip(midvalue,fi)]
     avgdata = sum(xifi) / sum(fi)
     x = [abs(i - avgdata) for i in midvalue]
